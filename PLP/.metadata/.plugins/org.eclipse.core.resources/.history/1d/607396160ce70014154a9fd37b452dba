@@ -1,0 +1,26 @@
+package cop5555sp15;
+
+import java.util.ArrayList;
+
+public class X 
+{
+	void f()
+	{
+		//String a="a";
+		//System.out.println(a+"b");
+		//int[] arr={1,2,3};
+		ArrayList<Boolean> a = new ArrayList<Boolean>();
+	//	a.size();
+	//for(int i=0;i<3;i++)
+	//	{
+			Boolean b=new Boolean(true);
+			a.add(b);
+			a.set(0, b)
+			//a.get(0);
+			//Object o=new Object();
+			//o.toString();
+			
+	//	}
+	}
+	
+}

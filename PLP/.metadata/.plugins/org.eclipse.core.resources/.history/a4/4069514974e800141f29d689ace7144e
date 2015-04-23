@@ -1,0 +1,37 @@
+package cop5555sp15;
+
+import static org.junit.Assert.assertNotNull;
+import cop5555sp15.ast.ASTNode;
+import cop5555sp15.ast.Program;
+
+public class MyTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input = "class A {\n print 3; \n}";
+		System.out.println(input);
+		Program program = (Program) parseCorrectInput(input);
+		assertNotNull(program);
+		typeCheckCorrectAST(program);
+		byte[] bytecode = generateByteCode(program);
+		assertNotNull(bytecode);
+		System.out.println("\nexecuting bytecode:");
+		executeByteCode(program.JVMName, bytecode);
+	}
+	
+	
+	private static ASTNode parseCorrectInput(String input) {
+		TokenStream stream = new TokenStream(input);
+		Scanner scanner = new Scanner(stream);
+		scanner.scan();
+		Parser parser = new Parser(stream);
+		System.out.println();
+		ASTNode ast = parser.parse();
+		if (ast == null) {
+			System.out.println("errors " + parser.getErrors());
+		}
+		assertNotNull(ast);
+		return ast;
+	}
+
+}

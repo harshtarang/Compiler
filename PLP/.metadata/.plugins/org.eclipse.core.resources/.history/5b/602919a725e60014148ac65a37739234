@@ -1,0 +1,20 @@
+package cop5555sp15;
+
+import java.util.ArrayList;
+
+public class X 
+{
+	void f()
+	{
+		//String a="a";
+		//System.out.println(a+"b");
+		int[] arr={1,2,3};
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		for(int i=0;i++;i<3)
+		{
+		Integer b=new Integer(arr[i]);
+		a.add(b);
+		}
+	}
+	
+}

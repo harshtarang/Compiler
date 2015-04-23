@@ -1,0 +1,14 @@
+package cop5555sp15;
+
+import java.util.ArrayList;
+
+public class X 
+{
+	void f()
+	{
+		//String a="a";
+		//System.out.println(a+"b");
+		ArrayList<Integer> a = new ArrayList<Integer>();
+	}
+	
+}

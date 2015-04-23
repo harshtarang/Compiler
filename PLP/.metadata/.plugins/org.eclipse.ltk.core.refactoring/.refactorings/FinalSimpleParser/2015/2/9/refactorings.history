@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;cop5555sp15&apos; to &apos;AbstractSyntaxTree/src&apos;&#x0A;- Original project: &apos;FinalSimpleParser&apos;&#x0A;- Destination element: &apos;AbstractSyntaxTree/src&apos;&#x0A;- Original element: &apos;FinalSimpleParser/src/cop5555sp15&apos;" description="Copy package" destination="=AbstractSyntaxTree/src" element1="/src&lt;cop5555sp15" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1424895574128" version="1.0"/>
+</session>
