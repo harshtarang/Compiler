@@ -28,7 +28,7 @@ public class CodeletBuilder
 		if (ast == null) {
 			System.out.println("errors " + parser.getErrors());
 		}
-		assertNotNull(ast);
+		//assertNotNull(ast);
 		return ast;
 	}
 	
@@ -55,7 +55,7 @@ public class CodeletBuilder
 	
 	public static Codelet newInstance(String source) throws Exception
 	{
-		//TODO
+		
 		Program program = (Program) parseCorrectInput(source);
 		typeCheckCorrectAST(program);
 		byte[] bytecode = generateByteCode(program);
@@ -97,7 +97,7 @@ public class CodeletBuilder
 	
 	public static void setInt(Codelet codelet, String name, int value) throws Exception
 	{
-		//TODO
+		
 		Class<? extends Codelet> codeletClass = codelet.getClass();
 		Field l1Field = codeletClass.getDeclaredField(name);
 		l1Field.setAccessible(true);
@@ -107,23 +107,38 @@ public class CodeletBuilder
 	
 	public static String getString(Codelet codelet, String name) throws Exception
 	{
-		//TODO
-		return null;
+		
+		Class<? extends Codelet> codeletClass = codelet.getClass();
+		Field l1Field = codeletClass.getDeclaredField(name);
+		l1Field.setAccessible(true);
+		String s = (String) l1Field.get(codelet);
+		return s;
 	}
 	public static void setString(Codelet codelet, String name, String value) throws Exception
 	{
-		//TODO
-	
+		
+		Class<? extends Codelet> codeletClass = codelet.getClass();
+		Field l1Field = codeletClass.getDeclaredField(name);
+		l1Field.setAccessible(true);
+		l1Field.set(codelet, value);
 	}
 	
 	public static boolean getBoolean(Codelet codelet, String name) throws Exception
 	{
-		//TODO
-		return false;
+		
+		Class<? extends Codelet> codeletClass = codelet.getClass();
+		Field l1Field = codeletClass.getDeclaredField(name);
+		l1Field.setAccessible(true);
+		boolean b = (boolean) l1Field.get(codelet);
+		return b;
 	}
 
 	public static void setBoolean(Codelet codelet, String name, boolean value) throws Exception
 	{
-		//TODO
+		
+		Class<? extends Codelet> codeletClass = codelet.getClass();
+		Field l1Field = codeletClass.getDeclaredField(name);
+		l1Field.setAccessible(true);
+		l1Field.set(codelet, value);
 	}
 }
