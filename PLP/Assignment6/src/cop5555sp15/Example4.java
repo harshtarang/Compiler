@@ -15,7 +15,7 @@
 package cop5555sp15;
 import java.io.File;
 import java.util.List;
-public class Example2 
+public class Example4 
 {
 	public static void main(String[] args) throws Exception
 	{

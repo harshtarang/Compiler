@@ -1,0 +1,15 @@
+class List
+{
+	def l:@[int];
+	
+	def i:int;
+	
+	l=@[100,200];
+	
+	while(i>0)
+	{
+		l[i-1]=i;
+		i=i-1;
+	};
+	
+}

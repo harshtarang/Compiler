@@ -2,6 +2,7 @@ package cop5555sp15;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.lang.reflect.Field;
@@ -68,8 +69,18 @@ public class CodeletBuilder
 	
 	public static Codelet newInstance(File file) throws Exception 
 	{
-		//TODO
-		return null;
+		
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		String line=null;
+		StringBuilder sb=new StringBuilder();
+		while((line=br.readLine())!=null)
+		{
+			sb.append(line);
+			
+		}	
+		br.close();
+		
+		return newInstance(sb.toString());
 	}
 	
 	@SuppressWarnings("rawtypes")
