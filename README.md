@@ -7,8 +7,9 @@ class B {
 def k: int;
 k = 6;
 while (k>0) 
-{ print k; 
-k=k-1;
+{
+	print k; 
+	k=k-1;
 }; 
 print "done";
 
