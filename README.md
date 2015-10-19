@@ -2,6 +2,7 @@
 
 This application is a compiler for a small language. The program to be compiled and run should have no method.All the code to be processed should be written within the class consruct itself. Following is the example of a program which compiles and runs successfully using this compiler.
 
+
 class B {
 
 def k: int;
